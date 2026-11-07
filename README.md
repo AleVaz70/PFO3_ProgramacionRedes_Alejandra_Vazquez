@@ -16,10 +16,9 @@ en una arquitectura distribuida usando **sockets TCP** y un **pool de workers**.
   el pedido, lo **encola** y un **pool de 4 workers** (hilos) lo procesa con
   la lógica del PFO 2 (hashing con `werkzeug` + SQLite) y devuelve el
   resultado por el mismo socket.
-  > **¿Por qué TCP y no UDP?** Porque el sistema necesita garantizar que
-> los pedidos de registro/login lleguen completos y en orden (no se puede
-> perder un registro de usuario). UDP no garantiza entrega ni orden, así
-> que no sirve para este caso.
+> **¿Por qué TCP y no UDP?** Porque el sistema necesita garantizar que los pedidos de registro/login
+> lleguen completos y en orden (no se puede > perder un registro de usuario). UDP no garantiza entrega
+> ni orden, así que no sirve para este caso.
 
 ## Arquitectura
 
